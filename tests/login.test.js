@@ -17,41 +17,37 @@ describe('Login Test Suite', function (){
         return _browser.quit();
     });
 
-    it('Should be able to login to AccountID Marketing Center',function(){
-            return _browser.findElement(webdriver.By.xpath(".//*[@id='loginBoxDiv']/input[1]")).sendKeys(constants.ACCOUNT_ID_SW)
-            .then(function(){
-                return  _browser.findElement(webdriver.By.xpath(".//*[@id='loginBoxDiv']/input[2]")).sendKeys(constants.USER_NAME_SW)
-                .then(function(){
-                    return  _browser.findElement(webdriver.By.xpath(".//*[@id='loginBoxDiv']/input[3]")).sendKeys(constants.PASSWORD_SW)
-                    .then(function(){
-                        return  _browser.findElement(webdriver.By.id('btnSubmit')).click()
-                        .then(function(){
-                             return _browser.findElement(webdriver.By.xpath(".//*[@id='tab_Home']/a/i")).getText()
-                             .then(function(text){
-                                assert.equal(text,"home");
-                             });
-                        });
-                    });
-                });
-            });
+    it('Should be able to login to _user48 Marketing Center',function(){
+        return Promise.all([
+            _browser.findElement(webdriver.By.xpath(".//*[@id='loginBoxDiv']/input[1]")).sendKeys(constants.ACCOUNT_ID_SW),
+            _browser.findElement(webdriver.By.xpath(".//*[@id='loginBoxDiv']/input[2]")).sendKeys(constants.USER_NAME_SW),
+            _browser.findElement(webdriver.By.xpath(".//*[@id='loginBoxDiv']/input[3]")).sendKeys(constants.PASSWORD_SW),
+            _browser.findElement(webdriver.By.id('btnSubmit')).click()
+        ])
+        .then(function(){
+           return _browser.findElement(webdriver.By.xpath(".//*[@id='tab_Home']/a/i")).getText()
+        .then(function(text){
+            assert.equal(text,"home");
+           })
+        }).catch(function(err){            
+            throw new Error(err.message);            
+        });
     });
 
-    it('Should be able to login to AccountID Marketing Center',function(){
-        return _browser.findElement(webdriver.By.xpath(".//*[@id='loginBoxDiv']/input[1]")).sendKeys(constants.ACCOUNT_ID_IN)
+    it('Should be able to login to _user23 Marketing Center',function(){
+        return Promise.all([
+            _browser.findElement(webdriver.By.xpath(".//*[@id='loginBoxDiv']/input[1]")).sendKeys(constants.ACCOUNT_ID_IN),
+            _browser.findElement(webdriver.By.xpath(".//*[@id='loginBoxDiv']/input[2]")).sendKeys(constants.USER_NAME_IN),
+            _browser.findElement(webdriver.By.xpath(".//*[@id='loginBoxDiv']/input[3]")).sendKeys(constants.PASSWORD_IN),
+            _browser.findElement(webdriver.By.id('btnSubmit')).click()
+        ])
         .then(function(){
-            return  _browser.findElement(webdriver.By.xpath(".//*[@id='loginBoxDiv']/input[2]")).sendKeys(constants.USER_NAME_IN)
-            .then(function(){
-                return  _browser.findElement(webdriver.By.xpath(".//*[@id='loginBoxDiv']/input[3]")).sendKeys(constants.PASSWORD_IN)
-                .then(function(){
-                    return  _browser.findElement(webdriver.By.id('btnSubmit')).click()
-                    .then(function(){
-                         return _browser.findElement(webdriver.By.xpath(".//*[@id='tab_Home']/a/i")).getText()
-                         .then(function(text){
-                            assert.equal(text,"home");
-                         });
-                    });
-                });
-            });
+           return _browser.findElement(webdriver.By.xpath(".//*[@id='tab_Home']/a/i")).getText()
+        .then(function(text){
+            assert.equal(text,"home");
+           })
+        }).catch(function(err){            
+            throw new Error(err.message);            
         });
     });
 });
