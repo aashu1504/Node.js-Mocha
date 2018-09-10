@@ -108,7 +108,7 @@ await assert.equal(present, true,container not displayed);
 });
     
 
-# Reporting - Mocha Awesome:
+# Reporting - Mocha Awesome
 
 Mocha Awesome is a custom Mocha Test reporter which generates test results in an HTML and JSON File.
 
