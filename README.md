@@ -8,7 +8,7 @@ JavaScript’s asynchronous nature poses special challenges for Selenium.
 
 Selenium can be used in combination with the JavaScript language, thanks to the Node.JS engine and the Mocha framework.
 
-# Setting up Selenium with JavaScript and Node.JS
+# Setting up Selenium with JavaScript and Node.js
 
 In case you don’t have a dev environment geared towards the web, you need to install some essentials tools:
 
