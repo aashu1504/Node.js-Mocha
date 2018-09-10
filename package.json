@@ -4,7 +4,7 @@
   "description": "Node.js with Mocha",
   "main": "index.js",
   "scripts": {
-    "test": "mocha */*.test.js --reporter mochawesome"
+    "test": "mocha */*.test.js --reporter mochawesome --reporter-options reportTitle='Health Check Report'"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "mocha": "^5.2.0",
-    "mochawesome": "^3.0.3"
+    "mochawesome": "^3.0.3",
+    "mochawesome-screenshots": "^1.6.0"
   }
 }
