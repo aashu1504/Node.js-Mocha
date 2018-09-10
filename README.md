@@ -1,4 +1,4 @@
-# Selenium Web Driver for Node.js with Mocha
+# Node.js - Selenium Web Driver with Mocha
 
 Selenium is a wonderful library. It supports all major browsers, has all the features we will probably need, and is currently the standard in browser tests today.
 
