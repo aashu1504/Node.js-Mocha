@@ -18,15 +18,15 @@ An IDE — Visual Studio Code(recommended) though there are others too.
 
 Steps:
 
-#Create a new folder at a specific directory. Now, it’s time to interact with Node by initializing a project: do this by opening a new command line/terminal window in that folder and typing "npm init"
+1. Create a new folder at a specific directory. Now, it’s time to interact with Node by initializing a project: do this by opening a new command line/terminal window in that folder and typing "npm init"
 
-#Node will guide you through the creation of the package.json file, which is similar to the pom.xml from Maven. It holds information like your project name, version, description and more. If you are unsure what to write for every prompt, just hit Enter to continue.
+2. Node will guide you through the creation of the package.json file, which is similar to the pom.xml from Maven. It holds information like your project name, version, description and more. If you are unsure what to write for every prompt, just hit Enter to continue.
 
-#Once done, it’s time to install Selenium and the Mocha framework  Node.JS uses the npm to achieve such thing.
+3. Once done, it’s time to install Selenium and the Mocha framework  Node.JS uses the npm to achieve such thing.
 
-#To get Selenium, simply open a command line/terminal in your project folder and type "npm install selenium-webdriver --save"
+4. To get Selenium, simply open a command line/terminal in your project folder and type "npm install selenium-webdriver --save"
 
-#Another package that we need to install is Mocha. This is similar to TestNG from the Java world. It enables the use of different functionalities that are already present in the selenium-webdriver package. Do this by typing in a command line/terminal "npm install -g mocha"
+5. Another package that we need to install is Mocha. This is similar to TestNG from the Java world. It enables the use of different functionalities that are already present in the selenium-webdriver package. Do this by typing in a command line/terminal "npm install -g mocha"
 
 # Writing a simple test
 
